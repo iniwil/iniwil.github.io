@@ -108,6 +108,17 @@ a:active {
 
 }
 
+.intro-photo
+{
+	object-fit: cover;
+	max-width: 150px;
+	display: block;
+	float: inline-end;
+	padding:5px;
+
+
+}
+
 .mon-text 
 {
 	font-family: 'IBM Plex Mono', monospace;
