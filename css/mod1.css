@@ -113,7 +113,7 @@ a:active {
 	object-fit: cover;
 	max-width: 150px;
 	display: block;
-	float: inline-end;
+	/*float: inline-end;*/
 	float: right;
 	padding:5px;
 
