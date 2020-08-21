@@ -335,6 +335,8 @@ h6, .h6 {
 @media print, screen and (min-width: 40em) {
   .h1a, ..h1a {
     font-size: 3rem; }
+  h1, .h1 {
+    font-size: 3rem; }
   h2, .h2 {
     font-size: 2.5rem; }
   h3, .h3 {
