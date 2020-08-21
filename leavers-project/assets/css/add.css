@@ -127,6 +127,7 @@ table caption {
   /*margin-bottom: 1em;*/
   background-color: #ff9562;
   color: #ffffff;
+  font-weight: 400;
 }
 
 .quote-text {
