@@ -137,7 +137,8 @@ background-color: #c4eae2;
 .quote-author {
 margin-left: 2rem;
 border-left: 6px solid #c4eae2;
-
+font-family: 'IBM Plex Mono', monospace;
+font-weight: 300;
 
 }
 
