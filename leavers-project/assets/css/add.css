@@ -152,6 +152,21 @@ font-weight: 350;
 
 }
 
+.credit-lead {
+font-family: 'IBM Plex Mono', monospace;
+font-weight: 600;
+font-size: larger;
+}
+
+.credit-help {
+font-family: 'IBM Plex Mono', monospace;
+}
+
+.credit-frames {
+ font-family: 'IBM Plex Mono', monospace;
+ font-size: smaller; 
+}
+
 
 #identity-question {
   width: 100%;
