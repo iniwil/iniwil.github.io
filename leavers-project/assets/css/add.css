@@ -203,16 +203,14 @@ font-family: 'IBM Plex Mono', monospace;
   background: url('data:image/svg+xml;utf8,<svg ...> ... </svg>');
 }
 
-.twitter-icon {
-  background: url(
+.bookmark-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.46 40'%3E%3Cpath fill='%232e9b92' d='M21.46 40l-10.73-9.76L0 40V3.36l3.9-.43L4.88 0h16.58v40z' data-name='Layer 2'/%3E%3C/svg%3E");
+  
 
-
-    ) no-repeat left center;
-    padding: 5px 0 5px 25px;
 }
 
-.filler-li {
+/*.filler-li {
     background: url(data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7) no-repeat left center;
     padding: 5px 0 5px 25px;
-}
+}*/
 
