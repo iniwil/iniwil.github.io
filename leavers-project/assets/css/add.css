@@ -108,7 +108,15 @@ table caption {
 
 .ccimg img {
   width: 100%;
-  /*filter: drop-shadow(6px 3px .25rem #e0e0e0);*/
+  margin: -15px -10px 5px 2px;
+  border-right: .5px dashed #e0e0e0;
+  border-bottom: .5px dashed #e0e0e0;
+
+}
+
+.ccimgds img {
+  width: 100%;
+  filter: drop-shadow(6px 3px .25rem #e0e0e0);
   margin: -15px -10px 5px 2px;
   border-right: .5px dashed #e0e0e0;
   border-bottom: .5px dashed #e0e0e0;
@@ -204,15 +212,16 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 .survey-share {
-  height: 2rem;
-  width: 2rem;
-  padding: .1rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  padding: .1rem .5rem .1rem .1rem;
+  float: left;
 }
 
 .bookmark-icon {
   display: block;
   float: left;
-  background-size: 1.2rem 1.2rem;
+  background-size: 1.3rem 1.3rem;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.46 40'%3E%3Cpath fill='%232e9b92' d='M21.46 40l-10.73-9.76L0 40V3.36l3.9-.43L4.88 0h16.58v40z' data-name='Layer 2'/%3E%3C/svg%3E") ;
   
