@@ -7,14 +7,12 @@ font-family: 'IBM Plex Serif', serif;
 font-family: 'Open Sans', sans-serif;
 }
 
-/*.wcallout {background-color: : #484848;}*/
+
 
 
 .credit {
-	/*font-family: 'IBM Plex Mono', monospace;*/
+	
   padding: 0px 0px 10px 20px;
-  /*padding-bottom: 10px;*/
-  /*margin-bottom: 10px;*/
   font-weight: 600;
   color:#434343;
 
@@ -80,7 +78,6 @@ table caption {
   font-weight: 600;
   text-decoration: underline solid #ff124f;
   text-decoration-thickness:3px;
-  /*color: #ff124f;*/
 }
 
 .graktest {
@@ -89,8 +86,6 @@ table caption {
 
 .pair-frame-l {
   padding: 2px;
-  /*border-right: 1px solid #282828;*/
-  /*background-color: #f4f4f4;*/
   margin-bottom: 2em;
 }
 
@@ -136,7 +131,6 @@ table caption {
 .quote-label {
   text-transform: uppercase;
   padding:5px;
-  /*margin-bottom: 1em;*/
   background-color: #ff9562;
   color: #ffffff;
   font-size: 1.2rem;
@@ -179,17 +173,11 @@ font-family: 'IBM Plex Mono', monospace;
 #identity-question {
   width: 100%;
   background-color: #eee3a8;
-  /*border: 1px solid #282828;*/
-  /*padding: 10px;*/
-/*text-align: left;*/
-/*font-family: monospace;*/
-/*font: 1.0rem Inconsolata, monospace;*/
 
 }
 #identity-question th {
   text-align: left;
   text-transform: uppercase;
-  /*font-family: 1.0rem 'IBM Plex Mono', monospace;*/
 }
 #identity-question tbody {
   font-family: 'IBM Plex Mono', monospace;
@@ -198,18 +186,12 @@ font-family: 'IBM Plex Mono', monospace;
 
 #identity-question tr {
   text-align: left;
-  /*font-family: 1.0rem 'IBM Plex Mono', monospace;*/
 }
 #identity-question td {
   text-align: left;
   font-family: 1.0rem monospace;
 }
 
-/*Sharing icons*/
-
-.svg-icon {
-  background: url('data:image/svg+xml;utf8,<svg ...> ... </svg>');
-}
 
 .survey-share {
   height: 2.4rem;
@@ -238,11 +220,4 @@ font-family: 'IBM Plex Mono', monospace;
 
 }
 
-  
-  
-  
-/*.filler-li {
-    background: url(data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7) no-repeat left center;
-    padding: 5px 0 5px 25px;
-}*/
-
+ 
