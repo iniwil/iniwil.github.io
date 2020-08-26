@@ -9,6 +9,12 @@
 
 	}
 
+.project-thumb {
+	float: left;
+	padding:.2rem;
+	
+}
+
 .bio
 	{
 		/*position: relative;*/
