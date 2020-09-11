@@ -335,6 +335,13 @@ padding:	10px;
 	padding: 2px;
 	display: inline-block;
 	float: left;
+	background-color: #f9f9f9;
+}
+
+.map-entry p {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: small;
+	font-weight: 200;
 }
 
 .thumb-map
