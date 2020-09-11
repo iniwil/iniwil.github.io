@@ -342,6 +342,7 @@ padding:	10px;
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: small;
 	font-weight: 200;
+	line-height: 1.2rem;
 }
 
 .thumb-map
@@ -353,14 +354,23 @@ padding:	10px;
 	float: left;
 }
 
+.thumb-map2 img {
+	
+	margin: 2px;
+	/*padding: 2px;*/
+	display: inline-block;
+	float: left;
+}
+
 .projects
 	{
-		/*height:6rem;*/
+		
 		padding: 10px;
 		min-height: 5rem;
 		background-size: 375px 255px;
 		background-image: linear-gradient(to top, transparent, 20%, white),
                   url("../img/innocence-lost.jpg");
+        background-repeat: no-repeat;
 		
 	}
 
