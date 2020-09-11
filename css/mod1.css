@@ -515,11 +515,12 @@ padding:	10px;
 	/*min-height: 30px;*/
 	/*margin: 20px;*/
 	padding-left:10px;
+	line-height: .9rem;
 }
-.home-links-text a
+.home-links-text
 {
-	background: #787878;
-	color: #f2f3f4;
+	/*background: #787878;*/
+	color: #bdc2c7;
 	font-family: 'IBM Plex Mono', monospace;
 	font-style: bold;
 	font-weight: 200;
