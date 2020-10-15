@@ -19,8 +19,13 @@
 	/*display: inline-flex;*/
 	float: left;
 	padding:1rem;
-	max-width: 100%;
+	margin-right:5px;
+	max-width: 22rem;
 	
+}
+
+@media print, screen and (min-width: 40em) .project-img {
+
 }
 
 .latest  {
