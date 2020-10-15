@@ -16,17 +16,15 @@
 }
 
 .project-img {
-	/*display: inline-flex;*/
+	
 	float: left;
 	padding:1rem;
 	margin-right:5px;
-	max-width: 22rem;
+	max-width: 25rem;
 	
 }
 
-@media print, screen and (min-width: 40em) .project-img {
 
-}
 
 .latest  {
 	font-family: 'IBM Plex Mono', monospace;
