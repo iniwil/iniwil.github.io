@@ -197,9 +197,9 @@ a:active {
 	padding:	10px;
 	/*margin:		10px;*/
 	color: #f2f3f4;
-	font-family: 'IBM Plex Mono', monospace;
-	font-style: normal;
+	font-family: 'Roboto Slab', serif;	font-style: normal;
 	font-weight: 400;
+	text-transform: uppercase;
 }
 .maps-label
 {
