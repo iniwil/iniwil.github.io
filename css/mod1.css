@@ -193,14 +193,42 @@ a:active {
 }
 .consult-label
 {
+	/*background-color: #378a7b;*/
+	padding:	10px;
+	/*margin:		10px;*/
+	/*color: #f2f3f4;*/
+	color: #378a7b;
+	font-family: 'Roboto Slab', serif;	font-style: normal;
+	font-weight: 900;
+	font-size: larger;
+	/*text-transform: uppercase;*/
+}
+
+.consult-label-text
+{
+	/*background-color: #378a7b;*/
+	padding:	10px;
+	/*margin:		10px;*/
+	/*color: #f2f3f4;*/
+	color: #787878;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 400;
+	/*text-transform: uppercase;*/
+}
+
+.consult-title
+{
 	background-color: #378a7b;
 	padding:	10px;
 	/*margin:		10px;*/
 	color: #f2f3f4;
+	/*color: #378a7b;*/
 	font-family: 'Roboto Slab', serif;	font-style: normal;
-	font-weight: 400;
-	text-transform: uppercase;
+	font-weight: 900;
+	/*text-transform: uppercase;*/
 }
+
+
 .maps-label
 {
 	background-color: #767caf;
