@@ -214,9 +214,17 @@ h3 {
 
 .small-icon {
   max-width: 300px;
-  max-height: 100%;
+  max-height: 250px;
   float: left;
   margin-right: 1rem;
+
+}
+
+.small-icon-rt {
+  max-width: 300px;
+  max-height: 250px;
+  float: right;
+  margin-left: 1rem;
 
 }
 
@@ -451,6 +459,11 @@ border-left: solid 1rem #006cb4;
   background: linear-gradient(#cfd877, #fdd7d8) !important;
   color: #202020 !important;
   border: 1px solid lightblue;
+}
+
+
+.tgl .instagram-media {
+  margin: auto !important;
 }
 
 .small-title {
