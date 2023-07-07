@@ -281,6 +281,7 @@ footer {
   display:block;
   width:100%;
   margin:0 auto;
+  padding: 0 1rem 0 1rem ;
   overflow:hidden;
   max-width:960px;
 }
@@ -556,7 +557,18 @@ green light #cfd877*/
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
-  content: "GUIDE ";
+  content: "📒 GUIDE ";
+}
+
+.tool-label::before {
+  text-transform: uppercase;
+  background-color: #cc0000;
+  color: #e0ffff;
+  padding: 0.2rem;
+  float: right;
+  border-radius: 0.1rem;
+  border: dotted thin #fff;
+  content: "🛠️ TOOL";
 }
 
 .article-label::before {
@@ -582,7 +594,7 @@ green light #cfd877*/
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
-  content: "PLAYBOOK";
+  content: "📒 PLAYBOOK";
 }
 
 .tile-logo {
@@ -591,6 +603,7 @@ green light #cfd877*/
   float: left;
   padding-right: 1rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 
 }
 
