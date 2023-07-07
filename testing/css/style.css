@@ -562,7 +562,7 @@ green light #cfd877*/
 
 .tool-label::before {
   text-transform: uppercase;
-  background-color: #cc0000;
+  background-color: #cc6600;
   color: #e0ffff;
   padding: 0.2rem;
   float: right;
@@ -582,7 +582,7 @@ green light #cfd877*/
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
-  content: "IIF";
+  content: "📰 IIF";
 
 }
 
@@ -619,6 +619,32 @@ green light #cfd877*/
 }
 
 .rji-tile a:link {
+  color: #ff553f;
+}
+
+
+
+.rji-agenda-tile {
+   background: linear-gradient(#ebf2f4, #fff) !important; 
+  color: #1c5e90 !important;
+  border: 1px solid lightblue;
+  border-radius: 0.1rem;
+
+
+}
+.rji-agenda-tile a:link {
+  color: #ff553f;
+}
+
+
+.rji-source-tile {
+   background: linear-gradient(#a4dbde, #E9F6F6); 
+  color: #1c5e90 !important;
+  border: 1px solid lightblue;
+  border-radius: 0.1rem;
+}
+
+.rji-source-tile a:link {
   color: #ff553f;
 }
 
