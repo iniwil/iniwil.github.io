@@ -293,6 +293,10 @@ footer img {
   max-height: 3rem;
 }
 
+.partner-footer {
+  float: right;
+}
+
 
 /*accordion controls */
 
@@ -503,7 +507,8 @@ green light #cfd877*/
 
 .tgl h2 {
   font-family: 'Crimson Pro', serif;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: xx-large;
 }
 
 .tgl .gallery .tile.full .post {
