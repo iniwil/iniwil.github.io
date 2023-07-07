@@ -554,6 +554,21 @@ green light #cfd877*/
   content: "GUIDE ";
 }
 
+.article-label::before {
+  background-image: url( '/img/rji/IIF.svg');
+/*  height: 10px;*/
+/*  width: 30px;*/
+  text-transform: uppercase;
+  background-color: #f0b828;
+  color: #787878;
+  padding: 0.2rem;
+  float: right;
+  border-radius: 0.1rem;
+  border: dotted thin #fff;
+  content: "IIF";
+
+}
+
 .playbook-label::before{
   text-transform: uppercase;
   background-color: #fe6f5e;
@@ -589,6 +604,32 @@ green light #cfd877*/
   color: #ff553f;
 }
 
+
+.iif-tile {
+
+
+/*  background: linear-gradient(#feb3aa, #1c5e90) !important;*/
+/*  background: linear-gradient(#ffe0dc, #ffe0dc,#e9f0fd, lightblue) !important;*/
+  background: #2f97a1 !important;
+  color: #1c5e90 !important;
+  border: 1px solid lightblue;
+  border-radius: 0.1rem;
+}
+
+.iif-tile h2 {
+  font-size: medium;
+  font-weight: 400;
+  line-height: 1.4rem;
+
+}
+
+.iif-tile a:link {
+  color: #ff553f;
+}
+
+.iif-tile a:visited {
+  color: #3fe9ff;
+}
 
 @media screen and (min-width:480px){
   .gallery .tile{
