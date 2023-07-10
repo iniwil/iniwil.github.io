@@ -597,6 +597,17 @@ green light #cfd877*/
   content: "📒 PLAYBOOK";
 }
 
+.fellow-label {
+  text-transform: uppercase;
+  background-color: #247abb;
+  color: #fff;
+  padding: 0.2rem;
+  float: right;
+  border-radius: 0.1rem;
+  border: dotted thin #fff;
+  content: "RJI FELLOW";
+}
+
 .tile-logo {
   max-width: 50%;
   max-height: 150px;
