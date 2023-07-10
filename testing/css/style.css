@@ -597,7 +597,7 @@ green light #cfd877*/
   content: "📒 PLAYBOOK";
 }
 
-.fellow-label {
+.fellow-label::before {
   text-transform: uppercase;
   background-color: #247abb;
   color: #fff;
@@ -605,7 +605,7 @@ green light #cfd877*/
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
-  content: "RJI FELLOW";
+  content: "FELLOW";
 }
 
 .tile-logo {
