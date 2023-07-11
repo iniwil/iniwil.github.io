@@ -12,7 +12,7 @@ font-family: 'Nunito Sans', sans-serif;*/
 .gallery *:after{
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
-  box-sizing:border-box;
+
 }
 
 main {
@@ -163,6 +163,48 @@ h3 {
   text-align: right;
 }
 
+.announce {
+  font-family: 'Crimson Pro', serif !important;
+  font-size: 1.3rem;
+  line-height: 1.1rem;
+  text-transform: uppercase;
+}
+
+.link-button-group {
+  display: flex;
+  width: 100%;
+
+
+}
+
+
+.link-button-group .tile {
+  padding: 0.5rem !important;
+  justify-content: ;
+}
+
+.link-button-group .tile .post {
+  padding: 0.5rem !important;
+  text-align: center;
+
+}
+
+
+.link-button-group h2 {
+    font-family: 'Crimson Pro', serif !important;
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+ 
+}
+
+.link-button-group a:link {
+  color: #fff;
+}
+
+.link-button-group a:visited {
+  color: #fff;
+}
 
 .lead-quote {
   font-style: italic;
@@ -174,11 +216,17 @@ h3 {
   margin:0 auto;
   overflow:hidden;
   max-width:960px;
+  box-sizing:border-box;
+  display: flex;
+  flex-direction: row;
+  
+  flex-flow: wrap;
+  align-items: stretch;
 
 }
 
 .gallery .tile{
-  display:block;
+/*  display:block;*/
   width:100%;
   padding:0 0.5rem 0.5rem 0;
 
@@ -196,6 +244,12 @@ h3 {
 
 /*  text-align:center;*/
     padding:1rem 2rem;
+    height: 100%;
+}
+
+.gallery .tile .post p {
+
+
 }
 
 .logo {
@@ -554,6 +608,7 @@ green light #cfd877*/
   background-color: greenyellow;
   color: #787878;
   padding: 0.2rem;
+  margin: -1rem -2rem;
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
@@ -565,6 +620,7 @@ green light #cfd877*/
   background-color: #cc6600;
   color: #e0ffff;
   padding: 0.2rem;
+  margin: -1rem -2rem;
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
@@ -579,6 +635,7 @@ green light #cfd877*/
   background-color: #f0b828;
   color: #787878;
   padding: 0.2rem;
+  margin: -1rem -2rem;
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
@@ -591,6 +648,7 @@ green light #cfd877*/
   background-color: #fe6f5e;
   color: #fff;
   padding: 0.2rem;
+  margin: -1rem -2rem;
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
@@ -602,10 +660,11 @@ green light #cfd877*/
   background-color: #247abb;
   color: #fff;
   padding: 0.2rem;
+  margin: -1rem -2rem;
   float: right;
   border-radius: 0.1rem;
   border: dotted thin #fff;
-  content: "FELLOW";
+  content: "🎓 FELLOW";
 }
 
 .tile-logo {
@@ -614,8 +673,18 @@ green light #cfd877*/
   float: left;
   padding-right: 1rem;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 
+}
+
+.tile-logo-r {
+
+  max-width: 50%;
+  max-height: 150px;
+  float: right;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .rji-tile {
@@ -685,6 +754,29 @@ green light #cfd877*/
 .iif-tile a:visited {
   color: #3fe9ff;
 }
+
+.c-playbook {
+
+}
+
+.c-tools {
+
+
+}
+
+
+.c-fellows {
+
+
+}
+
+
+.c-call {
+
+}
+
+
+
 
 @media screen and (min-width:480px){
   .gallery .tile{
