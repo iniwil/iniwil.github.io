@@ -170,41 +170,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.link-button-group {
-  display: flex;
-  width: 100%;
 
-
-}
-
-
-.link-button-group .tile {
-  padding: 0.5rem !important;
-  justify-content: ;
-}
-
-.link-button-group .tile .post {
-  padding: 0.5rem !important;
-  text-align: center;
-
-}
-
-
-.link-button-group h2 {
-    font-family: 'Crimson Pro', serif !important;
-    font-size: 1.3rem;
-    line-height: 1.2rem;
-    text-transform: uppercase;
- 
-}
-
-.link-button-group a:link {
-  color: #fff;
-}
-
-.link-button-group a:visited {
-  color: #fff;
-}
 
 .lead-quote {
   font-style: italic;
@@ -632,8 +598,8 @@ green light #cfd877*/
 /*  height: 10px;*/
 /*  width: 30px;*/
   text-transform: uppercase;
-  background-color: #f0b828;
-  color: #787878;
+  background-color: #2f97a1;
+  color: #fff;
   padding: 0.2rem;
   margin: -1rem -2rem;
   float: right;
@@ -712,6 +678,7 @@ green light #cfd877*/
 
 
 }
+
 .rji-agenda-tile a:link {
   color: #ff553f;
 }
@@ -731,10 +698,10 @@ green light #cfd877*/
 
 .iif-tile {
 
-
-/*  background: linear-gradient(#feb3aa, #1c5e90) !important;*/
+/*background: linear-gradient(#f9e2a8, #9edde3) !important;*/
+/* background: linear-gradient(#f0b828, #2f97a1) !important; */
 /*  background: linear-gradient(#ffe0dc, #ffe0dc,#e9f0fd, lightblue) !important;*/
-  background: #2f97a1 !important;
+  background: linear-gradient(#f9e2a8, #9edde3) !important;
   color: #1c5e90 !important;
   border: 1px solid lightblue;
   border-radius: 0.1rem;
@@ -748,15 +715,53 @@ green light #cfd877*/
 }
 
 .iif-tile a:link {
-  color: #ff553f;
+  color: #2c2c2c;
 }
 
 .iif-tile a:visited {
-  color: #3fe9ff;
+  color: #2c2c2c;
 }
 
-.c-playbook {
+.link-button-group {
+  display: flex;
+  width: 100%;
 
+
+}
+
+
+.link-button-group .tile {
+  padding: 0.2rem !important;
+  justify-content: ;
+}
+
+.link-button-group .tile .post {
+  padding: 0.2rem !important;
+  text-align: center;
+
+}
+
+
+.link-button-group h2 {
+    font-family: 'Crimson Pro', serif !important;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    text-transform: uppercase;
+
+}
+
+.link-button-group a:link {
+  color: #fff;
+}
+
+.link-button-group a:visited {
+  color: #fff;
+}
+
+
+.c-playbook {
+  background-color: #fe6f5e !important;
+  color: #fff;
 }
 
 .c-tools {
@@ -766,7 +771,8 @@ green light #cfd877*/
 
 
 .c-fellows {
-
+  background-color: #247abb !important;
+  color: #fff;
 
 }
 
