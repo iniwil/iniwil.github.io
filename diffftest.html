@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Side-by-Side Word Diff</title>
+
+<!-- Diff library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.2.0/diff.min.js"></script>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #f6f8fa;
+    padding: 20px;
+  }
+
+  .diff-wrapper {
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  td {
+    vertical-align: top;
+    padding: 6px 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace;
+    font-size: 14px;
+  }
+
+  td.old {
+    border-right: 1px solid #eee;
+    background: #fff;
+  }
+
+  td.new {
+    background: #fff;
+  }
+
+  .line-number {
+    width: 40px;
+    color: #999;
+    user-select: none;
+  }
+
+  .added-word {
+    background-color: #d4f8d4;
+    color: #1a7f37;
+  }
+
+  .removed-word {
+    background-color: #ffdce0;
+    color: #b42318;
+    text-decoration: line-through;
+  }
+
+  .unchanged {
+    color: #444;
+  }
+
+  .collapsed {
+    text-align: center;
+    background: #f0f0f0;
+    cursor: pointer;
+    font-style: italic;
+    color: #666;
+  }
+
+  .collapsed:hover {
+    background: #e2e2e2;
+  }
+</style>
+</head>
+<body>
+
+<h2>Word-Level Side-by-Side Diff</h2>
+<div class="diff-wrapper">
+  <table id="diffTable"></table>
+</div>
+
+<script>
+function escapeHtml(text) {
+  return text.replace(/&/g, "&amp;")
+             .replace(/</g, "&lt;")
+             .replace(/>/g, "&gt;");
+}
+
+function createWordDiff(oldLine, newLine) {
+  const diff = Diff.diffWords(oldLine, newLine);
+  let oldHtml = "";
+  let newHtml = "";
+
+  diff.forEach(part => {
+    const text = escapeHtml(part.value);
+    if (part.added) {
+      newHtml += `<span class="added-word">${text}</span>`;
+    } else if (part.removed) {
+      oldHtml += `<span class="removed-word">${text}</span>`;
+    } else {
+      oldHtml += `<span class="unchanged">${text}</span>`;
+      newHtml += `<span class="unchanged">${text}</span>`;
+    }
+  });
+
+  return { oldHtml, newHtml };
+}
+
+function buildDiff(oldText, newText) {
+  const oldLines = oldText.split("\n");
+  const newLines = newText.split("\n");
+  const max = Math.max(oldLines.length, newLines.length);
+  const table = document.getElementById("diffTable");
+
+  let unchangedBuffer = [];
+
+  function flushUnchanged() {
+    if (unchangedBuffer.length > 2) {
+      const hiddenRows = unchangedBuffer.map(row => {
+        row.style.display = "none";
+        return row;
+      });
+
+      const collapseRow = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = 4;
+      td.className = "collapsed";
+      td.textContent = `Show ${hiddenRows.length} unchanged lines`;
+      td.onclick = () => {
+        hiddenRows.forEach(r => r.style.display = "table-row");
+        collapseRow.remove();
+      };
+      collapseRow.appendChild(td);
+      table.appendChild(collapseRow);
+    } else {
+      unchangedBuffer.forEach(row => table.appendChild(row));
+    }
+    unchangedBuffer = [];
+  }
+
+  for (let i = 0; i < max; i++) {
+    const oldLine = oldLines[i] ?? "";
+    const newLine = newLines[i] ?? "";
+
+    if (oldLine === newLine) {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="line-number">${i+1}</td>
+        <td class="old unchanged">${escapeHtml(oldLine)}</td>
+        <td class="line-number">${i+1}</td>
+        <td class="new unchanged">${escapeHtml(newLine)}</td>`;
+      unchangedBuffer.push(row);
+    } else {
+      flushUnchanged();
+
+      const { oldHtml, newHtml } = createWordDiff(oldLine, newLine);
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="line-number">${i+1}</td>
+        <td class="old">${oldHtml}</td>
+        <td class="line-number">${i+1}</td>
+        <td class="new">${newHtml}</td>`;
+      table.appendChild(row);
+    }
+  }
+
+  flushUnchanged();
+}
+
+
+// 🔁 Replace with your own text
+const oldText = `The quick brown fox
+jumps over the lazy dog.
+This line will stay the same.
+Another unchanged line.`;
+
+const newText = `The quick brown fox
+leaps over the very lazy dog.
+This line will stay the same.
+Another unchanged line.
+This is a brand new line.`;
+
+buildDiff(oldText, newText);
+</script>
+
+</body>
+</html>
