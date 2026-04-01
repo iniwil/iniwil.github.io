@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --red:#00adef;
+  --bg:#f5f3ef;
+  --text:#1a1a1a;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:'Libre Franklin',Arial,sans-serif;
+  --overlay:rgba(255,255,255,0.93);
+  --overlay-dark:rgba(0,0,0,0.55);
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --red:#cfe0ed;
+    --bg:#181614;
+    --text:#e8e5e0;
+    --overlay:rgba(24,22,20,0.93);
+  }
+}
+
+body{background:var(--bg);font-family:var(--sans);color:var(--text);}
+
+#hr-panel{
+  position:fixed;
+  top:0;left:0;width:100%;height:100vh;
+  background:var(--bg);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  z-index:100;
+  visibility:hidden;
+}
+#hr-panel.visible{visibility:visible;}
+
+#hr-img{
+  position:absolute;
+  inset:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+#hr-img img{
+  max-width:100%;max-height:100vh;
+  width:auto;height:auto;
+  object-fit:contain;
+  display:block;
+  filter: drop-shadow(10px 10px 8px #91a3b0);
+}
+
+#hr-narration{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:860px;
+  padding:1.1rem 1.5rem;
+  margin-top: 0.5rem;
+  background:var(--overlay);
+  border-left:6px solid var(--red);
+  font-family:var(--serif);
+  font-size:clamp(1.1rem,2.5vw,1.5rem);
+  line-height:1.5;
+  color:var(--text);
+  filter: drop-shadow(0 0 0.75rem #bcd4e6);
+  border-radius: 4px;
+  z-index:10;
+}
+#hr-narration.pos-top{top:0;}
+#hr-narration.pos-over{top:50%;transform:translateX(-50%) translateY(-50%);}
+
+#hr-text-tile{
+  position:absolute;
+  inset:0;
+  display:flex;align-items:center;justify-content:center;
+  padding:2.5rem 2rem;
+  z-index:10;
+}
+#hr-text-tile p{
+  font-family:var(--serif);
+  font-size:clamp(1.2rem,3vw,1.75rem);
+  line-height:1.55;
+  max-width:600px;
+  text-align:center;
+  color:var(--text);
+}
+
+#hr-prog{position:fixed;top:0;left:0;height:6px;background:var(--red);width:0;z-index:9999;pointer-events:none;}
+
+#hr-scroll{position:relative;}
+.step-spacer{height:100vh;}
+</style>
+</head>
+<body>
+
+<div id="hr-prog"></div>
+
+<div id="hr-panel">
+  <div id="hr-img">
+    <img id="main-img" src="" alt="">
+  </div>
+  <div id="hr-narration" class="pos-top"></div>
+  <div id="hr-text-tile"><p></p></div>
+</div>
+
+<div id="hr-scroll">
+  <div class="step-spacer" data-type="text" data-text="Some financial aid offer letters don't include the most important information — how much a student will have to pay."></div>
+  <div class="step-spacer" data-type="image" data-img="AIDONLY1" data-narration="This letter shows federal grants and loans ..." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="AIDONLY2" data-narration="… but what's the cost to the student?" data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="AIDONLY3" data-narration="On this letter, you can see loans and aid — but, again, no total cost." data-pos="top"></div>
+  <div class="step-spacer" data-type="text" data-text="Some letters list more than one cost. See if you can figure out how much this student will owe in total."></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL1"  data-narration="This letter includes three different numbers for expenses." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL1a" data-narration="This letter includes three different numbers for expenses." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL1b" data-narration="This letter includes three different numbers for expenses." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL1c" data-narration="This letter includes three different numbers for expenses." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL2" data-narration="Lets zoom in on these ..." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL2" data-narration="Here we have the total estimated amount due at $48,816 …" data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL3" data-narration="But in another part of the letter, that amount changes to $38,316 …" data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEARTOTAL4" data-narration="In fact, the amount the student will owe is in this box, in a much smaller font and labeled estimated net price — it's $43,864." data-pos="top"></div>
+  <div class="step-spacer" data-type="text" data-text="Advocates say letters shouldn't list grants and loans together, because applicants often don't understand the difference."></div>
+  <div class="step-spacer" data-type="image" data-img="LOANSGRANTS1" data-narration="The loans will have to be repaid and will accrue interest. That's different from grants, which actually reduce the cost of tuition." data-pos="top"></div>
+  <div class="step-spacer" data-type="text" data-text="Even more confusing, not all loans are the same."></div>
+  <div class="step-spacer" data-type="image" data-img="PARENTPLUS1" data-narration="Parent PLUS loans are included here, even though the family may not be eligible. Also, interest for these loans accrues while a student is in school." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="PARENTPLUS2" data-narration="Nothing here indicates that repaying $19,072 in Parent PLUS loans would exceed $29,000 with a standard 10-year repayment plan — and that's just for one year of college." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="PARENTPLUS3" data-narration="This letter doesn't break out what portion of the $33,175 in loans is a private versus a Parent PLUS loan, but combines them as a lump sum. And it doesn't say anywhere that both loans would likely have a higher interest rate than a federal student loan." data-pos="top"></div>
+  <div class="step-spacer" data-type="text" data-text="Many colleges list &quot;work study&quot; as if it's guaranteed income, but that can depend on whether a student can find a job that pays what the college estimates."></div>
+  <div class="step-spacer" data-type="image" data-img="WORKSTUDY1" data-narration="In this case, the offer letter says the student will earn $3,180, but if they don't find a job, they still have to come up with that amount." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="WORKSTUDY2" data-narration="This one lists federal work-study but doesn't explain that the job isn't guaranteed." data-pos="top"></div>
+  <div class="step-spacer" data-type="text" data-text="When colleges use different terms and formats for how they present the final cost to students, it's difficult to compare them."></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEAR2" data-narration="This one uses the term &quot;remaining direct and indirect costs&quot; for the final amount a family owes, but other colleges use those terms to mean different things." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEAR3" data-narration="This one uses &quot;estimated net price&quot; for the final cost ..." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEAR4" data-narration="… while this one calls it &quot;estimated outstanding costs&quot; ..." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEAR5" data-narration="… and here we have &quot;costs after gifts and loans.&quot;" data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="UNCLEAR1" data-narration="Finally, this letter uses both &quot;direct costs&quot; and &quot;net costs&quot; — and even ends with a negative cost." data-pos="top"></div>
+  <div class="step-spacer" data-type="image" data-img="COLLAGEFINAL" data-narration="With colleges using so many different formats and terms, it's not surprising that families get confused. You can see why some people want colleges to use a standardized form. 
+  " data-pos="top"></div>
+</div>
+
+<script>
+(function(){
+  var BASE      = 'https://hechingerreport.org/wp-content/uploads/2026/03/';
+  var panel     = document.getElementById('hr-panel');
+  var mainImg   = document.getElementById('main-img');
+  var narration = document.getElementById('hr-narration');
+  var textTile  = document.getElementById('hr-text-tile');
+  var survey    = `<div><a href="https://docs.google.com/forms/d/e/1FAIpQLSe8bprHybX6fZHgerHtXkq0-6ZBAX_hfJdPYpZX5jMbHM-f6w/viewform">What do you think?</a></div>`;
+  var textTileP = textTile.querySelector('p');
+  var prog      = document.getElementById('hr-prog');
+  var spacers   = Array.from(document.querySelectorAll('.step-spacer'));
+  var scroll    = document.getElementById('hr-scroll');
+  var total     = spacers.length;
+  var VH        = window.innerHeight;
+  var lastIdx   = -1;
+
+  function applyStep(d){
+    if(d.type === 'text'){
+      mainImg.src = '';
+      document.getElementById('hr-img').style.display = 'none';
+      narration.style.display = 'none';
+      textTileP.textContent = d.text;
+      textTile.style.display = 'flex';
+    } else {
+      document.getElementById('hr-img').style.display = 'flex';
+      mainImg.src = BASE + d.img + '.png';
+      mainImg.alt = d.narration;
+      narration.innerHTML = d.narration + (d.img === 'COLLAGEFINAL' ? ' ' + survey : '');
+      narration.className = 'pos-' + (d.pos || 'top');
+      narration.style.display = 'block';
+      textTile.style.display = 'none';
+    }
+  }
+
+  function onScroll(){
+    VH = window.innerHeight;
+    var rect = scroll.getBoundingClientRect();
+
+    if(rect.bottom < 0 || rect.top > VH){
+      panel.classList.remove('visible');
+      return;
+    }
+    panel.classList.add('visible');
+
+    var scrolled = -rect.top + VH * 0.5;
+    var idx = Math.max(0, Math.min(total - 1, Math.floor(scrolled / VH)));
+
+    prog.style.width = ((idx + 1) / total * 100) + '%';
+
+    if(idx === lastIdx) return;
+    lastIdx = idx;
+    applyStep(spacers[idx].dataset);
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+
+  spacers.forEach(function(s){
+    if(s.dataset.img){
+      var i = new Image();
+      i.src = BASE + s.dataset.img + '.png';
+    }
+  });
+
+  applyStep(spacers[0].dataset);
+  onScroll();
+})();
+</script>
+</body>
+</html>
